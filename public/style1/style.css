@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --primary-color: #999;
+    --secondary-color: #CCC;
+    --accent-color: #F24325;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -17,8 +23,8 @@ body {
 }
 
 header {
-    background-color: #999;
-    color: red;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
     padding: 2rem;
 }
 
@@ -29,4 +35,75 @@ header h1 {
 
 header figure {
     margin-left: 10px;
+}
+
+.content {
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.content h3::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    margin-right: 4px;
+}
+
+.content h3 {
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.skills-primary::before {
+    content: "Main";
+}
+
+.skills-secondary::before {
+    content: "Other";
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.skill {
+    background-color: var(--secondary-color);
+    padding: 6px;
+    color: white;
+}
+
+.skill span {
+    display: inline-block;
+    background-color: var(--accent-color);
+}
+
+[data-skill="1"] span {
+    width: 10%;
+}
+
+[data-skill="3"] span {
+    width: 30%;
+}
+
+[data-skill="5"] span {
+    width: 50%;
+}
+
+[data-skill="7"] span {
+    width: 50%;
+}
+
+[data-skill="9"] span {
+    width: 50%;
 }
