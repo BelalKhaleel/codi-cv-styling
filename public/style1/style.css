@@ -3,7 +3,7 @@
 :root {
   --primary-color: #999;
   --secondary-color: #ccc;
-  --tertiary-color: #DBDBDB;
+  --tertiary-color: #dbdbdb;
   --accent-color: #f24325;
 }
 
@@ -74,12 +74,12 @@ header figure {
   padding-bottom: 12px;
 }
 
-#about p {
-    margin-top: 1rem;
-}
-
+#about,
 #competencies,
-#experiences {
+#experiences,
+#education,
+#hobbies,
+#contact {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -107,7 +107,7 @@ header figure {
 }
 
 .skills-secondary .skill {
-    background-color: var(--tertiary-color);
+  background-color: var(--tertiary-color);
 }
 
 .skill span {
@@ -136,16 +136,48 @@ header figure {
 }
 
 .experience-institution::before {
-    content: "@";
-    padding-right: 2px;
+  content: "@";
+  padding-right: 2px;
 }
 
 .experience-details {
-    color: var(--primary-color);
-    margin-left: 10px;
-    margin-bottom: 1rem;
+  color: var(--primary-color);
+  margin-left: 10px;
+  margin-bottom: 1rem;
 }
 
 .experience-location::before {
-    content: "In ";
+  content: "In ";
+}
+
+#hobbies ul {
+  padding-left: 2.5rem;
+}
+
+dl {
+  display: flex;
+  gap: 5px;
+}
+
+dt {
+  width: 136.458px;
+  color: white;
+  padding: 3px;
+}
+
+dd a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.contact-skype dd {
+  display: none;
+}
+
+.contact-skype::after {
+  content: "first.last";
+}
+
+a[href="tel:+96170261482"] {
+  font-family: serif;
 }
