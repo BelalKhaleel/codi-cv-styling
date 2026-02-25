@@ -5,6 +5,7 @@
   --secondary-color: #ccc;
   --tertiary-color: #dbdbdb;
   --accent-color: #f24325;
+  --padding-side: 6rem;
 }
 
 html {
@@ -55,7 +56,6 @@ header figure {
   padding-left: 1rem;
   padding-right: 5px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: 1.5rem;
 }
@@ -83,6 +83,10 @@ header figure {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+#competencies {
+  width: 100%;
 }
 
 .skills-primary::before {
@@ -180,4 +184,30 @@ dd a {
 
 a[href="tel:+96170261482"] {
   font-family: serif;
+}
+
+@media screen and (min-width: 1023px) {
+  header > div {
+    display: flex;
+    align-items: center;
+  }
+
+  header figure {
+    margin: 0;
+  }
+
+  .content {
+    justify-content: center;
+    column-gap: 0;
+    row-gap: 2rem;
+  }
+
+  #about,
+  #competencies,
+  #experiences,
+  #education,
+  #hobbies,
+  #contact {
+    width: calc((100% - (var(--padding-side) * 2)) / 2);
+  }
 }
