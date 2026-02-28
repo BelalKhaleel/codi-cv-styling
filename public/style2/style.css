@@ -3,6 +3,7 @@
 :root {
   --text-color: #B1B1B1;
   --accent-color: #2D8080;
+  --skills-gap: 8px;
 }
 
 html {
@@ -34,10 +35,71 @@ h2, figure, #about > h3 {
   display: none;
 }
 
-#about p {
-  color: var(--text-color);
+.content {
   padding: 0 18px;
-  text-align: justify;
-  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
+.content h3 {
+  font-style: italic;
+  text-decoration: underline;
+  margin-bottom: 1.5rem;
+}
+
+#about p {
+  color: var(--text-color);
+  text-align: justify;
+}
+
+#competencies {
+  margin-top: 3rem;
+}
+
+.skills {
+    display: flex;
+    gap: var(--skills-gap);
+}
+
+.skills-primary {
+  margin-bottom: var(--skills-gap);
+}
+
+.skills-secondary {
+  font-size: .6rem;
+}
+
+.skill {
+    background-color: var(--accent-color);
+    color: white;
+    width: calc((100% - var(--skills-gap) * 2) / 3);
+    padding: var(--skills-gap);
+    display: flex;
+    justify-content: space-between;
+}
+
+[data-skill="5"]::after {
+  content: "★★★";
+  color: white;
+}
+
+[data-skill="3"]::after {
+  content: "★★";
+  color: white;
+}
+
+[data-skill="1"]::after {
+  content: "★";
+  color: white;
+}
+
+[data-skill="9"]::after {
+  content: "★★★★★";
+  color: white;
+}
+
+[data-skill="7"]::after {
+  content: "★★★★";
+  color: white;
+}
