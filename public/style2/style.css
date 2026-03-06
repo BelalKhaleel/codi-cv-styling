@@ -44,8 +44,7 @@ h2, figure, #about > h3 {
 
 .content h3 {
   font-style: italic;
-  text-decoration: underline;
-  margin-bottom: 1.5rem;
+  border-bottom: 1px solid black;
 }
 
 #about p {
@@ -55,6 +54,15 @@ h2, figure, #about > h3 {
 
 #competencies {
   margin-top: 3rem;
+}
+
+#competencies h3 {
+  width: fit-content;
+}
+
+#competencies h3,
+#hobbies h3 {
+  margin-bottom: 2rem;
 }
 
 .skills {
@@ -102,4 +110,36 @@ h2, figure, #about > h3 {
 [data-skill="7"]::after {
   content: "★★★★";
   color: white;
+}
+
+section h3:not(#competencies h3) {
+  width: 125px;
+}
+
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.experience h4,
+.experience-details {
+  margin: 2rem 0;
+}
+
+.experience-details {
+  margin-left: auto;
+}
+
+.experience-institution {
+  display: none;
+}
+
+.experience-type,
+.experience-date-separator {
+  color: var(--accent-color);
+}
+
+.experience-location,
+.experience-date {
+  color: var(--text-color);
 }
