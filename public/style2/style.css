@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --text-color: #B1B1B1;
-  --accent-color: #2D8080;
+  --text-color: #b1b1b1;
+  --accent-color: #2d8080;
   --skills-gap: 8px;
 }
 
@@ -31,7 +31,9 @@ h1 {
   padding-bottom: 1.5rem;
 }
 
-h2, figure, #about > h3 {
+h2,
+figure,
+#about > h3 {
   display: none;
 }
 
@@ -66,8 +68,8 @@ h2, figure, #about > h3 {
 }
 
 .skills {
-    display: flex;
-    gap: var(--skills-gap);
+  display: flex;
+  gap: var(--skills-gap);
 }
 
 .skills-primary {
@@ -75,16 +77,16 @@ h2, figure, #about > h3 {
 }
 
 .skills-secondary {
-  font-size: .6rem;
+  font-size: 0.6rem;
 }
 
 .skill {
-    background-color: var(--accent-color);
-    color: white;
-    width: calc((100% - var(--skills-gap) * 2) / 3);
-    padding: var(--skills-gap);
-    display: flex;
-    justify-content: space-between;
+  background-color: var(--accent-color);
+  color: white;
+  width: calc((100% - var(--skills-gap) * 2) / 3);
+  padding: var(--skills-gap);
+  display: flex;
+  justify-content: space-between;
 }
 
 [data-skill="5"]::after {
@@ -142,4 +144,47 @@ section h3:not(#competencies h3) {
 .experience-location,
 .experience-date {
   color: var(--text-color);
+}
+
+#hobbies ul {
+  padding-left: 2.4rem;
+}
+
+#contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#contact h3,
+dt,
+dd {
+  display: none;
+}
+
+.contact-email::before,
+.contact-phone::before,
+.contact-github::before,
+.contact-facebook::before {
+  content: "";
+  display: inline-block;
+  background-size: cover;
+  width: 6rem;
+  height: 6rem;
+}
+
+.contact-email::before {
+  background-image: url("../images/email.png");
+}
+
+.contact-phone::before {
+  background-image: url("../images/phone.png");
+}
+
+.contact-github::before {
+  background-image: url("../images/github.png");
+}
+
+.contact-facebook::before {
+  background-image: url("../images/facebook.png");
 }
