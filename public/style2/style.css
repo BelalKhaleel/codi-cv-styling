@@ -52,6 +52,7 @@ figure,
 #about p {
   color: var(--text-color);
   text-align: justify;
+  font-style: italic;
 }
 
 #competencies {
@@ -87,6 +88,7 @@ figure,
   padding: var(--skills-gap);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 [data-skill="5"]::after {
@@ -187,4 +189,48 @@ dd {
 
 .contact-facebook::before {
   background-image: url("../images/facebook.png");
+}
+
+@media screen and (min-width: 1024px) {
+  #wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  header div {
+    position: relative;
+  }
+
+  figure {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transform: rotate(-15deg);
+  }
+
+  figure img {
+    width: 190px;
+  }
+
+  .content {
+    padding: 0; 
+  }
+
+  .content h3 {
+    border-bottom: none;
+  }
+  
+  #about p {
+    padding-right: 30%;
+  }
+
+  #competencies {
+    display: flex;
+  }
+
+  .skill {
+    width: 120px;
+  }
 }
