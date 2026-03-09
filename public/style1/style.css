@@ -49,19 +49,15 @@ header > div {
 }
 
 header h1 {
-  margin: 0;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
 }
 
 header figure {
-  margin: 0;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
 }
 
 .content {
-  padding-top: 3rem;
-  padding-left: 1rem;
-  padding-right: 5px;
+  padding: 3rem 5px 0 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -171,7 +167,8 @@ dl {
 }
 
 dt {
-  width: 136.458px;
+  min-width: 8.75rem;
+  flex-shrink: 0;
   color: white;
   padding: 3px;
 }
@@ -189,7 +186,7 @@ dd a {
   content: "first.last";
 }
 
-a[href="tel:+96170261482"] {
+.contact-phone a {
   font-family: serif;
 }
 
@@ -201,23 +198,14 @@ a[href="tel:+96170261482"] {
   }
 
   .content {
-    column-gap: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
-    padding-right: var(--padding-side);
-    padding-left: var(--padding-side);
-    padding-bottom: 10px;
+    padding: 3rem var(--padding-side) 10px;
   }
 
   .content p {
     padding-right: 10px;
-  }
-
-  #about,
-  #competencies,
-  #experiences,
-  #education,
-  #hobbies {
-    width: calc((100vw - (var(--padding-side) * 2)) / 2);
   }
 
   #contact {
