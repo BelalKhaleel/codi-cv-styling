@@ -5,7 +5,7 @@
   --secondary-color: #ccc;
   --tertiary-color: #dbdbdb;
   --accent-color: #f24325;
-  --padding-side: 6rem;
+  --padding-side: clamp(1rem, 5vw, 6rem);;
 }
 
 html {
@@ -39,12 +39,13 @@ dt {
 
 header {
   background-color: var(--primary-color);
-  padding: 2rem;
+  padding: 2rem var(--padding-side);
 }
 
 header > div {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
   gap: 1rem;
 }
 
@@ -192,20 +193,19 @@ dd a {
 
 @media screen and (min-width: 1023px) {
   header > div {
-    flex-direction: row;
-    align-items: flex-end;
-    padding-left: 6rem;
+    padding-left: 2rem;
   }
 
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
+    column-gap: 0;
     padding: 3rem var(--padding-side) 10px;
   }
 
   .content p {
-    padding-right: 10px;
+    padding-right: 30px;
   }
 
   #contact {
