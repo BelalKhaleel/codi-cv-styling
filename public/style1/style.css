@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 :root {
   --primary-color: #999;
@@ -21,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header,
@@ -185,10 +186,6 @@ dd a {
 
 .contact-skype::after {
   content: "first.last";
-}
-
-.contact-phone a {
-  font-family: serif;
 }
 
 @media screen and (min-width: 1023px) {
